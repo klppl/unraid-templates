@@ -20,7 +20,7 @@ Features:&#xD;
   <Category>MediaApp:Video</Category>
   <WebUI>http://[IP]:[PORT:3000]</WebUI>
   <TemplateURL/>
-  <Icon>https://raw.githubusercontent.com/klppl/RePlex/main/public/file.svg</Icon>
+  <Icon>https://raw.githubusercontent.com/klppl/RePlex/main/public/icon.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
