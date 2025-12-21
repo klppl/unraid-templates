@@ -7,7 +7,7 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support/>
+  <Support>https://forums.unraid.net/topic/195952-support-klppl-replex/</Support>
   <Project>https://github.com/klppl/RePlex/</Project>
   <Overview>A self-hosted Spotify Wrapped for your Plex server, powered by Tautulli.</Overview>
   <Category>MediaApp:Video</Category>
@@ -17,7 +17,7 @@
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1766301942</DateInstalled>
+  <DateInstalled>1766302725</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Requires/>
