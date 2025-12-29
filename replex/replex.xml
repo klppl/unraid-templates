@@ -1,64 +1,30 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>RePlex</Name>
-  <Repository>ghcr.io/klppl/replex:latest</Repository>
-  <Registry>https://ghcr.io/klppl/replex</Registry>
+  <Repository>klippel/replex</Repository>
+  <Registry>https://hub.docker.com/r/klippel/replex/</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://github.com/klppl/RePlex/issues</Support>
-  <Project>https://github.com/klppl/RePlex</Project>
-  <Overview>RePlex generates a "Spotify Wrapped" style year-in-review for Plex users by aggregating playback data from Tautulli.&#xD;
-&#xD;
-Features:&#xD;
-- Sign in with Plex&#xD;
-- Year in Review Stats&#xD;
-- AI Personality Roasts&#xD;
-- Tautulli Integration&#xD;
-</Overview>
+  <Support>https://forums.unraid.net/topic/195952-support-klppl-replex/</Support>
+  <Project>https://github.com/klppl/RePlex/</Project>
+  <Overview>A self-hosted Spotify Wrapped for your Plex server, powered by Tautulli.</Overview>
   <Category>MediaApp:Video</Category>
-  <WebUI>http://[IP]:[PORT:3000]</WebUI>
+  <WebUI/>
   <TemplateURL/>
-  <Icon>https://raw.githubusercontent.com/klppl/RePlex/main/public/icon.png</Icon>
+  <Icon>https://raw.githubusercontent.com/klppl/RePlex/refs/heads/main/public/icon.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled/>
+  <DateInstalled>1766302725</DateInstalled>
   <DonateText/>
   <DonateLink/>
-  <Description>RePlex generates a "Spotify Wrapped" style year-in-review for Plex users by aggregating playback data from Tautulli.</Description>
-  <Networking>
-    <Mode>bridge</Mode>
-    <Publish>
-      <Port>
-        <HostPort>3000</HostPort>
-        <ContainerPort>3000</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-    </Publish>
-  </Networking>
-  <Data>
-    <Volume>
-      <HostDir>/mnt/user/appdata/replex</HostDir>
-      <ContainerDir>/app/prisma</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
-  <Environment>
-    <Variable>
-      <Value/>
-      <Name>JWT_SECRET</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>false</Value>
-      <Name>DISABLE_SECURE_COOKIES</Name>
-      <Mode/>
-    </Variable>
-  </Environment>
-  <Config Name="WebUI Port" Target="3000" Default="3000" Mode="tcp" Description="Port for the RePlex Dashboard" Type="Port" Display="always" Required="true" Mask="false">3000</Config>
-  <Config Name="Appdata" Target="/app/prisma" Default="/mnt/user/appdata/replex" Mode="rw" Description="Location for the SQLite database" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/replex</Config>
-  <Config Name="JWT Secret" Target="JWT_SECRET" Default="" Mode="" Description="A secret key for signing tokens. Generate a random string." Type="Variable" Display="always" Required="true" Mask="true"/>
-  <Config Name="Disable Secure Cookies" Target="DISABLE_SECURE_COOKIES" Default="false" Mode="" Description="Set to 'true' if running locally without HTTPS to allow login." Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Requires/>
+  <Config Name="App path" Target="/app/prisma" Default="/mnt/user/appdata/replex" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/replex</Config>
+  <Config Name="PORT" Target="3000" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">3000</Config>
+  <Config Name="DATABASE" Target="DATABASE_URL" Default="file:/app/prisma/dev.db" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">file:/app/prisma/dev.db</Config>
+  <Config Name="JWT SECRET" Target="JWT_SECRET" Default="CHANG3_M3_!!!" Mode="" Description="CHANGE ME!" Type="Variable" Display="always" Required="false" Mask="false">CHANG3_M3_!!!</Config>
+  <Config Name="COOKIES" Target="DISABLE_SECURE_COOKIES" Default="true" Mode="" Description="Use if hosted public" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <TailscaleStateDir/>
 </Container>
